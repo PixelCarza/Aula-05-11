@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio</title>
+</head>
+<body>
+
+
+    <script>
+
+       const notasTurma = [8.5, 4.0, 11.5, 9.2, -1.0, 6.5, 7.0, 5.5];
+
+let aprovados = 0;
+let recuperacao = 0;
+
+
+for (let i = 0; i < notasTurma.length; i++) {
+    const nota = notasTurma[i];
+
+    console.log(`\nAluno ${i + 1} - Nota: ${nota}`);
+
+    
+    if (nota < 0.0 || nota > 10.0) {
+        console.log("Alerta: Nota inválida! Desconsiderada.");
+    } else if (nota >= 9.0) {
+        console.log("Desempenho Excelente (Conceito A)");
+        aprovados++;
+    } else if (nota >= 7.0) {
+        console.log("Desempenho Bom (Conceito B)");
+        aprovados++;
+    } else if (nota >= 6.0) {
+        console.log("Aprovado / Regular (Conceito C)");
+        aprovados++;
+    } else {
+        console.log("Em Recuperação (Conceito D)");
+        recuperacao++;
+    }
+}
+
+console.log("Alunos aprovados: " + aprovados);
+console.log("Alunos em recuperação: " + recuperacao);
+
+
+
+
+    </script>
+</body>
+</html>
